@@ -1,0 +1,36 @@
+<section class="movie-list">
+  <h4 class="title">{{ category }}</h4>
+  <p *ngIf="movies.length === 0; else displayList">List is empty.</p>
+  <ng-template #displayList>
+    <app-movie-list-container
+      [viewMode]="viewMode"
+      *ngIf="viewMode === sliderView"
+    >
+      <div *ngFor="let movie of movies">
+        <app-movie-backdrop
+          *ngIf="
+            movie.backdrop_path &&
+            movie.poster_path &&
+            movie.overview.trim() !== ''
+          "
+          [movie]="movie"
+        ></app-movie-backdrop>
+      </div>
+    </app-movie-list-container>
+    <app-movie-list-container
+      [viewMode]="viewMode"
+      *ngIf="viewMode === gridView"
+    >
+      <div *ngFor="let movie of movies">
+        <app-movie-poster
+          *ngIf="
+            movie.poster_path &&
+            movie.backdrop_path &&
+            movie.overview.trim() !== ''
+          "
+          [movie]="movie"
+        ></app-movie-poster>
+      </div>
+    </app-movie-list-container>
+  </ng-template>
+</section>

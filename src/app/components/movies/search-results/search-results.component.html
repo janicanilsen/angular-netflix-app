@@ -1,0 +1,16 @@
+<div *ngIf="searchText.trim() !== ''">
+  <h4 class="title">{{ searchMatches + "'" + searchText + "'" }}</h4>
+  <p *ngIf="searchResults.length < 1; else displaySearchResults">
+    No movie matches your search.
+  </p>
+  <ng-template #displaySearchResults>
+    <app-movie-list-container>
+      <div *ngFor="let movie of searchResults">
+        <app-movie-poster
+          *ngIf="movie.poster_path && movie.overview.trim() !== ''"
+          [movie]="movie"
+        ></app-movie-poster>
+      </div>
+    </app-movie-list-container>
+  </ng-template>
+</div>

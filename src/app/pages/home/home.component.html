@@ -1,0 +1,47 @@
+<p
+  *ngIf="
+    popularMovies.length === 0 ||
+      popularTVShows.length === 0 ||
+      topRatedMovies.length === 0 ||
+      topRatedTVShows.length === 0;
+    else displayMovies
+  "
+>
+  Loading...
+</p>
+<ng-template #displayMovies>
+  <div *ngIf="searchText.trim() === ''; else displaySearchResults">
+    <app-movie-details></app-movie-details>
+    <app-home-bg-image></app-home-bg-image>
+    <app-movie-list
+      *ngIf="popularMovies.length > 0"
+      [movies]="popularMovies"
+      [category]="categories.POPULAR_MOVIES"
+      [viewMode]="viewMode"
+    ></app-movie-list>
+    <app-movie-list
+      *ngIf="topRatedMovies.length > 0"
+      [movies]="topRatedMovies"
+      [category]="categories.TOP_RATED_MOVIES"
+      [viewMode]="viewMode"
+    ></app-movie-list>
+    <app-movie-list
+      *ngIf="popularTVShows.length > 0"
+      [movies]="popularTVShows"
+      [category]="categories.POPULAR_TV_SHOWS"
+      [viewMode]="viewMode"
+    ></app-movie-list>
+    <app-movie-list
+      *ngIf="topRatedTVShows.length > 0"
+      [movies]="topRatedTVShows"
+      [category]="categories.TOP_RATED_TV_SHOWS"
+      [viewMode]="viewMode"
+    ></app-movie-list>
+  </div>
+  <ng-template #displaySearchResults>
+    <app-search-results
+      [searchText]="searchText"
+      [searchResults]="searchResults"
+    ></app-search-results>
+  </ng-template>
+</ng-template>

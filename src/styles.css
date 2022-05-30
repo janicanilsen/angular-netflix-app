@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html {
+  /* 1rem = 10px (easier computation)
+        if set to 100%, 1rem = 16px (since this is the default browser setting) */
+  font-size: 62.5%;
+}
+
+:root {
+  --sugar-white: #ededeb;
+  --gray: #7b7c7c;
+  --licorice-black: #1a0d0d;
+}
+
+body {
+  background-color: var(--licorice-black);
+  color: var(--sugar-white);
+  font-size: 2rem;
+}
+
+p {
+  color: var(--gray);
+  font-size: 1.8rem;
+  padding: 5em;
+}

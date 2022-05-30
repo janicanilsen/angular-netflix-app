@@ -1,0 +1,45 @@
+.detail-box {
+    margin-top: 4rem;
+    margin-left: 5rem;
+}
+
+.detail-box label {
+    font-size: 5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--sugar-white);
+    padding: 1rem;
+}
+
+@media (max-width: 900px) {
+    .detail-box label {
+        font-size: 4rem;
+    }
+}
+
+.detail-box button {
+    margin-right: 1rem;
+    font-size: 1.7rem;
+    padding: 0.4em 1em;
+}
+
+.buttons {
+    margin-top: -1.8rem;
+    margin-left: -2rem;
+    padding: 1rem 3rem;
+    opacity: 0.5;
+}
+
+.movie-description {
+    font-size: 1.5rem;
+    padding: 1em 1.5em 2em 1em;
+    width: 35em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gray);
+}
+
+@media (max-width: 600px) {
+    .movie-description {
+        width: 25em;
+    }
+}

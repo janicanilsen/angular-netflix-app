@@ -1,0 +1,3 @@
+<app-movie-modal *ngIf="showMovieDetails" (backdropEvent)="onHideModal()">
+</app-movie-modal>
+<img [src]="imagePath" class="movie-image" (click)="onShowModal()" />

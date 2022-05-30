@@ -1,0 +1,12 @@
+<section class="detail-box">
+  <label for="movieTitle">{{
+    movie && movie.title ? movie.title : movie.name
+  }}</label>
+  <div class="buttons">
+    <button type="button" class="btn btn-secondary">Play</button>
+    <button [ngClass]="['btn', movieIsOnList ? 'btn-light' : 'btn-secondary']" (click)="addRemoveList()">
+      {{ movieIsOnList ? "Remove from list" : "Add to list" }}
+    </button>
+  </div>
+  <p class="movie-description">{{ movie.overview | movieDescription }}</p>
+</section>

@@ -1,0 +1,12 @@
+<app-movie-list
+  *ngIf="searchText.trim() === ''; else displaySearchResults"
+  [movies]="myMovieList"
+  [category]="listCategory"
+  [viewMode]="gridView"
+></app-movie-list>
+<ng-template #displaySearchResults>
+  <app-search-results
+    [searchText]="searchText"
+    [searchResults]="searchResults"
+  ></app-search-results>
+</ng-template>

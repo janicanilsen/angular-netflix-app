@@ -1,0 +1,20 @@
+<form>
+  <div class="search-group">
+    <fa-icon [icon]="searchIcon" class="search-icon"></fa-icon>
+    <label for="search" class="visually-hidden">Search</label>
+    <input
+      type="text"
+      id="search"
+      name="search"
+      placeholder="Search"
+      class="form-control search-box"
+      [(ngModel)]="searchText"
+      (keyup)="onChange($event)"
+    />
+    <fa-icon
+      [icon]="clearSearchIcon"
+      class="clear-search-icon"
+      (click)="onClear()"
+    ></fa-icon>
+  </div>
+</form>

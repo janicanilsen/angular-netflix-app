@@ -1,0 +1,22 @@
+.modal {
+    z-index: 2;
+    position: fixed;
+    background-color: #fefefe;
+    top: 10%;
+    left: 10%;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 80%;
+    display: block;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 15rem 0.5rem 15rem 15rem rgba(0, 0, 0, 0.9) inset;
+    border: none;
+    background-color: transparent;
+  }
+  

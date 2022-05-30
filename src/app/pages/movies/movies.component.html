@@ -1,0 +1,28 @@
+<p
+  *ngIf="
+    popularMovies.length === 0 || topRatedMovies.length === 0;
+    else displayMovies
+  "
+>
+  Loading...
+</p>
+<ng-template #displayMovies>
+  <div *ngIf="searchText.trim() === ''; else displaySearchResults">
+    <app-movie-list
+      [movies]="popularMovies"
+      [category]="popular"
+      [viewMode]="gridView"
+    ></app-movie-list>
+    <app-movie-list
+      [movies]="topRatedMovies"
+      [category]="topRated"
+      [viewMode]="gridView"
+    ></app-movie-list>
+  </div>
+  <ng-template #displaySearchResults>
+    <app-search-results
+      [searchText]="searchText"
+      [searchResults]="searchResults"
+    ></app-search-results>
+  </ng-template>
+</ng-template>

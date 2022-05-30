@@ -1,0 +1,5 @@
+<app-backdrop (backdropClickedEvent)="closeModal()"> </app-backdrop>
+<app-overlay>
+  <fa-icon [icon]="faTimesIcon" class="close" (click)="closeModal()"></fa-icon>
+  <app-movie-details class="modal-detail"></app-movie-details>
+</app-overlay>

@@ -1,0 +1,14 @@
+.movie-list {
+    margin-bottom: 3rem;
+}
+
+.movie-list p {
+    padding: 2em;
+    margin-left: 3em;
+}
+
+.title {
+    margin-left: 5rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+}

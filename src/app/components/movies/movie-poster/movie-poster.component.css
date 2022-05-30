@@ -1,0 +1,7 @@
+.movie-image {
+    width: 17rem;
+    max-width: 25rem;
+    height: auto;
+    margin: 2rem 0.5rem;
+    cursor: pointer;
+}

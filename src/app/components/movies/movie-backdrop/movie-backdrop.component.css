@@ -1,0 +1,15 @@
+.movie-image:hover {
+    position: relative;
+    top: 0rem;
+    padding-top: 0rem;
+    width: 40rem;
+    height: 18rem;
+}
+
+.movie-image {
+    height: 16rem;
+    width: 30rem;
+    margin-right: 0.5rem;
+    padding-top: 2rem;
+    cursor: pointer;
+}
